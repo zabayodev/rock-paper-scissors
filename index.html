@@ -4,25 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rock Paper Scissors Game</title>
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
 <header>
   <h1>Rock Paper Scissors</h1>
 </header>
-<dv class="score-board">
-  <div id="user-label" class="badge">user</div>
-  <div id="computer-label" class="badge">computer</div>
+<div class="score-board">
+  <div id="user-label" class="badge">Human</div>
+  <div id="computer-label" class="badge">Computer</div>
   <span id="user-score">0</span>:<span id="computer-score">0</span>
-</dv>
+</div>
 
 <div class="result">
   <p>Paper covers rock. You win!</p>
 </div>
 <div class="choices">
-  <div class="choice">
-    <img src="" alt="">
+  <div class="choice" id="rock">
+    <img src="./images/rock.png" alt="">
+  </div>
+  <div class="choice" id="paper">
+    <img src="./images/paper.png" alt="">
+  </div>
+  <div class="choice" id="scissors">
+    <img src="./images/scissors.png" alt="">
   </div>
 </div>
 <body>
   <script src="/script/app.js"></script>
+  <p id="action-taken">Make your Move</p>
 </body>
 </html>
