@@ -3,7 +3,7 @@ const computerScore = 0;
 const userScore_span = document.getElementById("user-score");
 const computerScore_span = document.getElementById("computer-score");
 const scoreBoard_div = document.querySelector(".score-board");
-const result_div = document.querySelector(".result");
+const result_p = document.querySelector(".result > p");
 const rock_div = document.getElementById("rock");
 const paper_div = document.getElementById("paper");
 const scissors_div = document.getElementById("scissors");
@@ -13,29 +13,39 @@ function getComputerChoice() {
     const randomNumber = Math.floor(Math.random() * 3);
     return choices[randomNumber];
 }
-console.log(getComputerChoice());
+function win(userChoice, computerChoice) {
+    userScore++;
+    userScore_span.innerHTML = userScore;
+    computerScore_span.innerHTML = computerScore;
+    result_p.innerHTML = userChoice + " beats" + computerChoice + ". You win!";
+}
+function lose() {
+
+}
+function draw() {
+    console.log("Draw");
+}
 
 function game(userChoice) {
     const computerChoice = getComputerChoice();
     switch(userChoice + computerChoice) {
-        case "rockpaper":
+        case "rockscissors":
         case "paperrock":
         case "scissorspaper":
-            console.log("user wins");
+            win(userChoice, computerChoice);
             break;
 
         case "rockpaper":
         case "paperscissors":
         case "scissorsrock":
-            console.log("user loses");
+            lose(userChoice, computerChoice);
             break;
 
         case "rockrock":
         case "paperpaper":
         case "scissorsscissors":
-            console.log("It's a draw");
+            draw(userChoice, computerChoice);
             break;
-
     }
 }
 
