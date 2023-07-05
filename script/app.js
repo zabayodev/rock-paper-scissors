@@ -8,5 +8,28 @@ const rock_div = document.getElementById("rock");
 const paper_div = document.getElementById("paper");
 const scissors_div = document.getElementById("scissors");
 
+function getComputerChoice() {
+    const choice = ['rock','paper','scissors'];
+    console.log(Math.random());
+}
+getComputerChoice();
 
+function game(userChoice) {
 
+}
+function main() {
+    rock_div.addEventListener('click',function(){
+        game("rock");
+    })
+
+    paper_div.addEventListener('click',function(){
+        game("paper");
+
+})
+    scissors_div.addEventListener('click',function(){
+        game("scissors");
+
+})
+}
+
+main()
