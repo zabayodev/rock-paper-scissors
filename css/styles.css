@@ -32,7 +32,7 @@ header > h1 {
 .score-board {
     margin: 20px auto;
     border: 3px solid white;
-    width: 250px;
+    width: 300px;
     color: white;
     font-size: 46PX;
     border-radius: 4px;
@@ -45,6 +45,7 @@ header > h1 {
     background-color: darkred;
     color: white;
     font-size: 20px;
+    margin-left: 10px;
     padding: 2px 10px;
     font-family: sans-serif;
 }
