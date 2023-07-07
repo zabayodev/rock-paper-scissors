@@ -32,15 +32,16 @@ function win(playerSelection, computerSelection) {
                             beats ${convertToword(computerSelection)}${smallComputerWord}. You win!"`;
     document.getElementById(playerSelection).classList.add('green-glow');
 }
-
-function lose(userChoice, computerChoice) {
+//Function that generate a loosing between a player and a computer
+//The function determines who loses between the computer and the player.
+function lose(playerSelection, computerSelection) {
     computerScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
     const smallUserWord = "user".fontsize(3).sub();
     const smallComputerWord = "computer".fontsize(3).sub();
-    result_p.innerHTML = `${convertToword(userChoice)}${smallUserWord} 
-                            loses to ${convertToword(computerChoice)}${smallComputerWord}. You lost!"`;
+    result_p.innerHTML = `${convertToword(playerSelection)}${smallUserWord} 
+                            loses to ${convertToword(computerSelection)}${smallComputerWord}. You lost!"`;
 }
 
 function draw(userChoice, computerChoice) {
