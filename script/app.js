@@ -54,25 +54,25 @@ function draw(playerSelection, computerSelection) {
                             equals ${convertToword(computerSelection)}${smallComputerWord}. It's a draw"`;
 }
 
-function game(userChoice) {
-    const computerChoice = getComputerChoice();
-    switch(userChoice + computerChoice) {
+function game(playerSelection) {
+    const computerSelection = getComputerChoice();
+    switch(playerSelection + computerSelection) {
         case "rs": 
         case "pr":
         case "sp":
-            win(userChoice, computerChoice);
+            win(playerSelection, computerSelection);
             break;
 
         case "rp":
         case "ps":
         case "sr":
-            lose(userChoice, computerChoice);
+            lose(playerSelection, computerSelection);
             break;
 
         case "rr":
         case "pp":
         case "ss":
-            draw(userChoice, computerChoice);
+            draw(playerSelection, computerSelection);
             break;
     }
 }
