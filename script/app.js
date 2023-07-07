@@ -43,14 +43,15 @@ function lose(playerSelection, computerSelection) {
     result_p.innerHTML = `${convertToword(playerSelection)}${smallUserWord} 
                             loses to ${convertToword(computerSelection)}${smallComputerWord}. You lost!"`;
 }
-
-function draw(userChoice, computerChoice) {
+//Function that generate a draw between a player and a computer
+//The function runs if there is a draw between the computer and the player.
+function draw(playerSelection, computerSelection) {
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
     const smallUserWord = "user".fontsize(3).sub();
     const smallComputerWord = "computer".fontsize(3).sub();
-    result_p.innerHTML = `${convertToword(userChoice)}${smallUserWord} 
-                            equals ${convertToword(computerChoice)}${smallComputerWord}. It's a draw"`;
+    result_p.innerHTML = `${convertToword(playerSelection)}${smallUserWord} 
+                            equals ${convertToword(computerSelection)}${smallComputerWord}. It's a draw"`;
 }
 
 function game(userChoice) {
