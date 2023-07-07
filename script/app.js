@@ -20,17 +20,19 @@ function convertToword(letter) {
     if (letter === "p") return "Paper";
     return "Scissors";
 }
-
-function win(userChoice, computerChoice) {
+//Function that generate a winning between a player and a computer
+//The function determines who wins between the computer and the player.
+function win(playerSelection, computerSelection) {
     userScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
     const smallUserWord = "user".fontsize(3).sub();
     const smallComputerWord = "computer".fontsize(3).sub();
-    result_p.innerHTML = `${convertToword(userChoice)}${smallUserWord} 
-                            beats ${convertToword(computerChoice)}${smallComputerWord}. You win!"`;
-    document.getElementById(userChoice).classList.add('green-glow');
+    result_p.innerHTML = `${convertToword(playerSelection)}${smallUserWord} 
+                            beats ${convertToword(computerSelection)}${smallComputerWord}. You win!"`;
+    document.getElementById(playerSelection).classList.add('green-glow');
 }
+
 function lose(userChoice, computerChoice) {
     computerScore++;
     userScore_span.innerHTML = userScore;
